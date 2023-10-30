@@ -3,7 +3,7 @@ package com.coderscampus.assignment7;
 public class CustomListApplication {
 
     public static void main(String[] args) {
-        CustomList<Integer> myCustomList = new CustomArrayList<>();
+        CustomList<Object> myCustomList = new CustomArrayList<>();
 
         addItemsToList(myCustomList);
         displayListInfo(myCustomList);
@@ -11,7 +11,7 @@ public class CustomListApplication {
         testRemoveFunction(myCustomList);
     }
 
-    public static void addItemsToList(CustomList<Integer> list) {
+    public static void addItemsToList(CustomList<Object> list) {
         for (int i = 1; i <= 40; i++) {
             list.add(i);
         }
@@ -19,7 +19,7 @@ public class CustomListApplication {
         System.out.println("Added items from 1 to 40.");
     }
 
-    private static void displayListInfo(CustomList<Integer> list) {
+    private static void displayListInfo(CustomList<Object> list) {
         System.out.println("--------");
         System.out.println("Size of list: " + list.getSize());
         System.out.println("First item: " + list.get(0));
@@ -30,7 +30,7 @@ public class CustomListApplication {
         }
     }
 
-    private static void testAddAtSpecificIndex(CustomList<Integer> list) {
+    private static void testAddAtSpecificIndex(CustomList<Object> list) {
         System.out.println("--------");
         list.add(40, 42);
         System.out.println("Added 42 at index 40.");
@@ -39,7 +39,7 @@ public class CustomListApplication {
         System.out.println("Size of list: " + list.getSize() + " | " + " LIST: " + list);
     }
 
-    private static void testRemoveFunction(CustomList<Integer> list) {
+    private static void testRemoveFunction(CustomList<Object> list) {
         System.out.println("--------");
         System.out.println("Removed item at index 5: " + list.remove(5));
         System.out.println("Updated size: " + list.getSize() + " | " + " LIST: " + list);
